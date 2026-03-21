@@ -41,7 +41,7 @@ def show_env_accounts_safely():
                 email, pwd = pair.split(":", 1)
                 email = email.strip()
                 # 密码脱敏：只显示前2位+***
-                masked_pwd = pwd[:2] + "***" if len(pwd) > 2 else "***"
+                masked_pwd = pwd[:8] + "***" if len(pwd) > 2 else "***"
                 logger.info(f"  账号{i}: 邮箱={email} | 密码={masked_pwd}")
             else:
                 logger.warning(f"  账号{i}: 格式错误（缺少冒号）: {pair}")
