@@ -56,3 +56,6 @@ jobs:
           repository: ${{ github.repository }}
           retain_days: 0
           keep_minimum_runs: 10
+ - run: echo "LEAFLOW_ACCOUNTS=$LEAFLOW_ACCOUNTS"
+  env:
+    LEAFLOW_ACCOUNTS: ${{ secrets.LEAFLOW_ACCOUNTS }}
